@@ -1,0 +1,23 @@
+{
+  "typescript.tsdk": "node_modules\\typescript\\lib",
+  "files.exclude": {
+    "node_modules": true
+  },
+  "files.eol": "\n",
+  "editor.tabSize": 2,
+  "editor.renderWhitespace": "all",
+  "editor.formatOnSave": true,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  },
+  "cSpell.words": ["tinspham209", "ramlabs", "tailwindcss", "hookform", "Zustand", "webp"]
+}
