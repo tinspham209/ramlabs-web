@@ -6,3 +6,72 @@ datasource db {
   provider = "mongodb"
   url      = env("DATABASE_URL")
 }
+
+model Category {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  name      String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  products   Product[] @relation(fields: [productIds], references: [id])
+  productIds String[]  @db.ObjectId
+}
+
+model Review {
+  id      String  @id @default(auto()) @map("_id") @db.ObjectId
+  rating  Int
+  comment String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  product   Product @relation(fields: [productId], references: [id])
+  productId String  @db.ObjectId
+}
+
+model Sale {
+  id       String @id @default(auto()) @map("_id") @db.ObjectId
+  name     String
+  discount Float
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  products  Product? @relation(fields: [productId], references: [id], onDelete: Cascade)
+  productId String?  @db.ObjectId
+}
+
+model Collection {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  name        String
+  url         String
+  price       Int
+  imageSrc    String[]
+  description String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  products Product[]
+}
+
+model Product {
+  id       String   @id @default(auto()) @map("_id") @db.ObjectId
+  name     String
+  price    Int
+  url      String
+  imageSrc String[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  reviews Review[]
+
+  categories  Category[] @relation(fields: [categoryIds], references: [id])
+  categoryIds String[]   @db.ObjectId
+
+  sales Sale[]
+
+  collection   Collection? @relation(fields: [collectionId], references: [id], onDelete: Cascade)
+  collectionId String?     @db.ObjectId
+}
