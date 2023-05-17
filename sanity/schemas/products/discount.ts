@@ -1,8 +1,7 @@
 import { RuleType } from '@sanity-type';
-
-const productCategory = {
-  name: 'product-category',
-  title: 'Product Category',
+const discount = {
+  name: 'product-discount',
+  title: 'Product Discount',
   type: 'document',
   fields: [
     {
@@ -15,10 +14,16 @@ const productCategory = {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
-      validation: (Rule: RuleType) => Rule.required(),
       options: { source: 'title', maxLength: 96 },
+      validation: (Rule: RuleType) => Rule.required(),
+    },
+    {
+      name: 'Discount',
+      title: 'Discount (%)',
+      type: 'number',
+      validation: (Rule: RuleType) => Rule.required(),
     },
   ],
 };
 
-export default productCategory;
+export default discount;

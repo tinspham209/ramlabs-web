@@ -1,3 +1,5 @@
+import { RuleType } from '@sanity-type';
+
 const artist = {
   name: 'artists',
   title: 'Artists',
@@ -7,6 +9,7 @@ const artist = {
       name: 'name',
       title: 'Name',
       type: 'string',
+      validation: (Rule: RuleType) => Rule.required(),
     },
     {
       name: 'slug',
@@ -16,6 +19,7 @@ const artist = {
         source: 'name',
         maxLength: 96,
       },
+      validation: (Rule: RuleType) => Rule.required(),
     },
     {
       name: 'image',

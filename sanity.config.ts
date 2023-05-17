@@ -6,7 +6,7 @@ const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || '';
 const config = defineConfig({
   projectId: projectId,
   dataset: dataset,
-  title: 'Admin | Ram Labs ',
+  title: 'Admin | RAM Labs ',
   apiVersion: '2023-05-17',
   basePath: '/admin',
   plugins: [deskTool()],

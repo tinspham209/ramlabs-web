@@ -25,7 +25,9 @@
     "tailwindcss",
     "hookform",
     "Zustand",
-    "webp"
+    "webp",
+    "hotspot",
+    "fieldsets"
   ],
   "typescript.enablePromptUseWorkspaceTsdk": true
 }

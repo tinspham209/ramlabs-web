@@ -28,7 +28,8 @@
       "@hooks": ["./app/hooks/index.ts"],
       "@hooks/*": ["./app/hooks/*"],
       "@prisma_lib": ["./app/libs/primadb.ts"],
-      "@sanity-config": ["./sanity.config.ts"]
+      "@sanity-config": ["./sanity.config.ts"],
+      "@sanity-type": ["./sanity/types/schemaTypes.ts"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "./app/**/*"],
