@@ -1,5 +1,5 @@
 {
-  "typescript.tsdk": "node_modules\\typescript\\lib",
+  "typescript.tsdk": ".\\node_modules\\typescript\\lib",
   "files.exclude": {
     "node_modules": true
   },
@@ -19,5 +19,13 @@
       "source.organizeImports": true
     }
   },
-  "cSpell.words": ["tinspham209", "ramlabs", "tailwindcss", "hookform", "Zustand", "webp"]
+  "cSpell.words": [
+    "tinspham209",
+    "ramlabs",
+    "tailwindcss",
+    "hookform",
+    "Zustand",
+    "webp"
+  ],
+  "typescript.enablePromptUseWorkspaceTsdk": true
 }
