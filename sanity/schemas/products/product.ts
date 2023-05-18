@@ -54,6 +54,12 @@ const productCategory = {
       validation: (Rule: RuleType) => Rule.required(),
     },
     {
+      name: 'new',
+      title: 'Is New?',
+      type: 'boolean',
+      description: 'Highlight New Arrival product in Homepage',
+    },
+    {
       name: 'image',
       title: 'Image',
       type: 'array',
