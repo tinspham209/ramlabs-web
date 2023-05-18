@@ -7,3 +7,4 @@ export { default as Input } from './Inputs';
 export { default as InputPassword } from './Inputs/password';
 export { default as Loader } from './Loader';
 export { default as Navbar } from './Navbar';
+export { default as Hero } from './Hero';

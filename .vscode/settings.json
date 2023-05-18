@@ -1,7 +1,8 @@
 {
   "typescript.tsdk": ".\\node_modules\\typescript\\lib",
   "files.exclude": {
-    "node_modules": true
+    "node_modules": true,
+    ".next": true
   },
   "files.eol": "\n",
   "editor.tabSize": 2,
@@ -27,7 +28,8 @@
     "Zustand",
     "webp",
     "hotspot",
-    "fieldsets"
+    "fieldsets",
+    "groq"
   ],
   "typescript.enablePromptUseWorkspaceTsdk": true
 }

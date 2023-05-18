@@ -20,7 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <ToasterProvider />
         </ClientOnly>
         <Navbar />
-        <div className="pb-20 pt-24">{children}</div>
+        <div className="pb-20 pt-16">{children}</div>
       </body>
     </html>
   );
