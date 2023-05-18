@@ -1,13 +1,14 @@
+import { SCHEMA_KEY } from '@sanity-key';
 import { RuleType } from '@sanity-type';
 
 const hero = {
-  name: 'hero-poster',
-  title: 'Hero Poster',
+  name: SCHEMA_KEY.HERO_BANNER,
+  title: 'Hero Banner',
   type: 'document',
   fields: [
     {
-      name: 'name',
-      title: 'Name',
+      name: 'title',
+      title: 'Title',
       type: 'string',
       validation: (Rule: RuleType) => Rule.required(),
     },
@@ -16,7 +17,7 @@ const hero = {
       title: 'Slug',
       type: 'slug',
       options: {
-        source: 'name',
+        source: 'title',
         maxLength: 96,
       },
       validation: (Rule: RuleType) => Rule.required(),
@@ -37,7 +38,7 @@ const hero = {
   ],
   preview: {
     select: {
-      title: 'name',
+      title: 'title',
       media: 'image',
     },
   },

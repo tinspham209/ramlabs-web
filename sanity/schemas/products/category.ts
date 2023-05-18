@@ -1,7 +1,8 @@
+import { SCHEMA_KEY } from '@sanity-key';
 import { RuleType } from '@sanity-type';
 
 const productCategory = {
-  name: 'product-category',
+  name: SCHEMA_KEY.PRODUCT_CATEGORY,
   title: 'Product Category',
   type: 'document',
   fields: [

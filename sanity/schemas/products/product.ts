@@ -1,6 +1,7 @@
+import { SCHEMA_KEY } from '@sanity-key';
 import { RuleType } from '@sanity-type';
 const productCategory = {
-  name: 'product',
+  name: SCHEMA_KEY.PRODUCT,
   title: 'Product',
   type: 'document',
   fields: [
@@ -25,7 +26,7 @@ const productCategory = {
         {
           type: 'reference',
           to: {
-            type: 'product-category',
+            type: SCHEMA_KEY.PRODUCT_CATEGORY,
           },
         },
       ],
@@ -36,7 +37,7 @@ const productCategory = {
       title: 'Artist',
       type: 'reference',
       to: {
-        type: 'artists',
+        type: SCHEMA_KEY.ARTISTS,
       },
     },
     {
@@ -44,7 +45,7 @@ const productCategory = {
       title: 'Collection',
       type: 'reference',
       to: {
-        type: 'collection',
+        type: SCHEMA_KEY.COLLECTION,
       },
     },
     {
@@ -79,7 +80,7 @@ const productCategory = {
       title: 'On Sale?',
       type: 'reference',
       to: {
-        type: 'product-discount',
+        type: SCHEMA_KEY.PRODUCT_DISCOUNT,
       },
     },
   ],

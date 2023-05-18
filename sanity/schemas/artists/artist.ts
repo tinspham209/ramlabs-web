@@ -1,7 +1,8 @@
+import { SCHEMA_KEY } from '@sanity-key';
 import { RuleType } from '@sanity-type';
 
 const artist = {
-  name: 'artists',
+  name: SCHEMA_KEY.ARTISTS,
   title: 'Artists',
   type: 'document',
   fields: [

@@ -1,6 +1,7 @@
+import { SCHEMA_KEY } from '@sanity-key';
 import { RuleType } from '@sanity-type';
 const discount = {
-  name: 'product-discount',
+  name: SCHEMA_KEY.PRODUCT_DISCOUNT,
   title: 'Product Discount',
   type: 'document',
   fields: [
